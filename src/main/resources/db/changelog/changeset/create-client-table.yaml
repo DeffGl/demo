@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-client-table
+      author: Vladislav
+      changes:
+        - createTable:
+            tableName: client
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: surname
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: patronymic
+                  type: varchar(200)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: secret_word
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+            schemaName: public

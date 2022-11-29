@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-transaction-table
+      author: Vladislav
+      changes:
+        - createTable:
+            tableName: transaction
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: date_of_create
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: sum
+                  type: double
+                  constraints:
+                    nullable: false
+              - column:
+                  name: type
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: account_id
+                  type: int
+                  constraints:
+                    foreignKeyName: account_transaction_fk
+                    referencedTableName: account
+                    referencedColumnNames: id
+                    nullable: false
+              - column:
+                  name: order_id
+                  type: int
+                  constraints:
+                    foreignKeyName: order_transaction_fk
+                    referencedTableName: order
+                    referencedColumnNames: id
+                    nullable: true
+              - column:
+                  name: outgoing_account_id
+                  type: int
+                  constraints:
+                    foreignKeyName: client_transaction_fk
+                    referencedTableName: account
+                    referencedColumnNames: id
+                    nullable: true
+              - column:
+                  name: result
+                  type: boolean
+                  constraints:
+                    nullable: false
+            schemaName: public

@@ -1,0 +1,149 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-account-data
+      author: Vladislav
+      changes:
+        - insert:
+            catalogName: accounts
+            columns:
+              - column:
+                  name: client_id
+                  value: "2"
+              - column:
+                  name: number
+                  value: "40000000000000000001"
+              - column:
+                  name: sum
+                  value: "100"
+              - column:
+                  name: type
+                  value: Сберегательный
+              - column:
+                  name: date_of_opening
+                  value: 2022-11-28 15:13:44.000000
+              - column:
+                  name: duration_of_years
+                  value: "4"
+            dbms: 'postgresql'
+            schemaName: public
+            tableName: account
+        - insert:
+            catalogName: accounts
+            columns:
+              - column:
+                  name: client_id
+                  value: "1"
+              - column:
+                  name: number
+                  value: "40000000000000000002"
+              - column:
+                  name: sum
+                  value: "100"
+              - column:
+                  name: type
+                  value: Сберегательный
+              - column:
+                  name: date_of_opening
+                  value: 2022-11-28 14:13:44.000000
+              - column:
+                  name: duration_of_years
+                  value: "4"
+            dbms: 'postgresql'
+            schemaName: public
+            tableName: account
+        - insert:
+            catalogName: accounts
+            columns:
+              - column:
+                  name: client_id
+                  value: "3"
+              - column:
+                  name: number
+                  value: "40000000000000000003"
+              - column:
+                  name: sum
+                  value: "100"
+              - column:
+                  name: type
+                  value: Сберегательный
+              - column:
+                  name: date_of_opening
+                  value: 2022-11-28 13:13:44.000000
+              - column:
+                  name: duration_of_years
+                  value: "4"
+            dbms: 'postgresql'
+            schemaName: public
+            tableName: account
+        - insert:
+            catalogName: accounts
+            columns:
+              - column:
+                  name: client_id
+                  value: "4"
+              - column:
+                  name: number
+                  value: "40000000000000000004"
+              - column:
+                  name: sum
+                  value: "100"
+              - column:
+                  name: type
+                  value: Сберегательный
+              - column:
+                  name: date_of_opening
+                  value: 2022-11-28 12:13:44.000000
+              - column:
+                  name: duration_of_years
+                  value: "4"
+            dbms: 'postgresql'
+            schemaName: public
+            tableName: account
+        - insert:
+            catalogName: accounts
+            columns:
+              - column:
+                  name: client_id
+                  value: "5"
+              - column:
+                  name: number
+                  value: "40000000000000000005"
+              - column:
+                  name: sum
+                  value: "100"
+              - column:
+                  name: type
+                  value: Сберегательный
+              - column:
+                  name: date_of_opening
+                  value: 2022-11-28 11:13:44.000000
+              - column:
+                  name: duration_of_years
+                  value: "4"
+            dbms: 'postgresql'
+            schemaName: public
+            tableName: account
+        - insert:
+            catalogName: accounts
+            columns:
+              - column:
+                  name: client_id
+                  value: "1"
+              - column:
+                  name: number
+                  value: "40000000000000000006"
+              - column:
+                  name: sum
+                  value: "100"
+              - column:
+                  name: type
+                  value: Основной
+              - column:
+                  name: date_of_opening
+                  value: 2022-11-28 18:13:44.000000
+              - column:
+                  name: duration_of_years
+                  value: "4"
+            dbms: 'postgresql'
+            schemaName: public
+            tableName: account

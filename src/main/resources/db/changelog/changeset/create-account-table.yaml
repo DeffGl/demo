@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-account-table
+      author: Vladislav
+      changes:
+        - createTable:
+            tableName: account
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: client_id
+                  type: int
+                  constraints:
+                    foreignKeyName: client_account_fk
+                    referencedTableName: client
+                    referencedColumnNames: id
+              - column:
+                  name: number
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: sum
+                  type: double
+                  constraints:
+                    nullable: false
+              - column:
+                  name: type
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date_of_opening
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: duration_of_years
+                  type: int
+                  constraints:
+                    nullable: false
+            schemaName: public

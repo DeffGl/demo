@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-transaction-data
+      author: Vladislav
+      changes:
+        - insert:
+            catalogName: orders
+            columns:
+              - column:
+                  name: date_of_create
+                  value: 28.11.2022
+              - column:
+                  name: sum
+                  value: "100"
+              - column:
+                  name: type
+                  value: Пополнение
+              - column:
+                  name: account_id
+                  value: "1"
+              - column:
+                  name: order_id
+                  value: "1"
+              - column:
+                  name: client_id
+                  value: "null"
+              - column:
+                  name: result
+                  value: "true"
+            dbms: 'postgresql'
+            schemaName: public
+            tableName: transaction

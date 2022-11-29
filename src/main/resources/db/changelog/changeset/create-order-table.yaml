@@ -1,0 +1,43 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-order-table
+      author: Vladislav
+      changes:
+        - createTable:
+            tableName: order
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: type
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: sum
+                  type: double
+                  constraints:
+                    nullable: false
+              - column:
+                  name: account_id
+                  type: int
+                  constraints:
+                    foreignKeyName: account_order_fk
+                    referencedTableName: account
+                    referencedColumnNames: id
+              - column:
+                  name: result
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date_of_create
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+            schemaName: public
