@@ -11,7 +11,3 @@ databaseChangeLog:
       file: db/changelog/changeset/insert-client-data.yaml
   - include:
       file: db/changelog/changeset/insert-account-data.yaml
-#  - include:
-#      file: db/changelog/changeset/insert-order-data.yaml
-#  - include:
-#      file: db/changelog/changeset/insert-transaction-data.yaml
